@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #536976; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #292e49,
+    #536976
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #292e49,
+    #536976
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main {
+  font-family: "Merienda", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2rem;
+}
+
+.container {
+  display: flex;
+
+  width: 100vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75vh;
+  border-radius: 25px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.5s ease-in;
+
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.75);
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  margin: 0;
+  opacity: 0;
+  background-color: rgba(240, 248, 255, 0.829);
+
+  border-radius: 25px;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+  .panel {
+    flex: 1;
+    height: 50vh;
+  }
+  .main {
+    margin: 6rem 2rem;
+  }
+  .panel h3 {
+    font-size: 20px;
+    position: absolute;
+    top: -120px;
+    left: 10px;
+    margin: 0;
+    opacity: 0;
+    background-color: rgb(240, 248, 255);
+
+    border-radius: 25px;
+    box-shadow: -3px 5px 15px 5px rgba(0, 0, 0, 0.75);
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+  .panel {
+    flex: 0.3;
+    height: 30vh;
+  }
+  .main {
+    margin: 10rem 0.5rem;
+  }
+  .panel h3 {
+    font-size: 16px;
+    position: absolute;
+    top: -150px;
+    left: 10px;
+    margin: 0;
+    opacity: 0;
+    background-color: rgb(240, 248, 255);
+
+    border-radius: 25px;
+    box-shadow: -3px 5px 15px 5px rgba(0, 0, 0, 0.75);
+    padding: 1rem;
+  }
+}
