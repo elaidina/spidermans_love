@@ -77,10 +77,10 @@ body {
   }
   .panel {
     flex: 1;
-    height: 50vh;
+    height: 40vh;
   }
   .main {
-    margin: 6rem 2rem;
+    margin: 6rem 0rem;
   }
   .panel h3 {
     font-size: 20px;
